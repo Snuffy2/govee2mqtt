@@ -19,9 +19,10 @@ on:
       - "scripts/build-docker.sh"
       - "Dockerfile"
       - ".dockerignore"
+  workflow_dispatch:      
 
 env:
-  IMAGE: ghcr.io/wez/govee2mqtt
+  IMAGE: ghcr.io/snuffy2/govee2mqtt
 
 jobs:
   build:
