@@ -192,7 +192,7 @@ pub fn topic_safe_string(s: &str) -> String {
 
 pub fn topic_safe_id(device: &ServiceDevice) -> String {
     let mut id = device.id.to_string();
-    id.retain(|c| c != ':');
+    id.retain(|c| c != ':'| c != ' ');
     id
 }
 
