@@ -181,7 +181,7 @@ impl HassClient {
 pub fn topic_safe_string(s: &str) -> String {
     let mut result = String::new();
     for c in s.chars() {
-        if c == ':' || c == ' ' {
+        if c == ':' || c == ' ' || c == '\\' || c == '/' || c == '\'' || c == '"' {
             result.push('_');
         } else {
             result.push(c.to_ascii_lowercase());
